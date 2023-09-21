@@ -1,9 +1,16 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'sorbet', :group => :development
-gem 'tapioca', require: false, :group => :development
 gem 'sorbet-runtime'
 
-gem "dry-cli", "~> 1.0"
+group :development do
+  gem 'sorbet'
+  gem 'tapioca', require: false
+end
+
+gem 'dry-cli', '~> 1.0'
+
+gem "dry-monads", "~> 1.6"
+
+gem "async", "~> 2.6"
