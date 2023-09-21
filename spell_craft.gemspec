@@ -8,7 +8,7 @@ $LOAD_PATH.unshift(config) unless $LOAD_PATH.include?(config)
 
 Gem::Specification.new do |spec|
   spec.name        = 'spell_craft'
-  spec.version     = '0.1.1'
+  spec.version     = '0.1.2'
   spec.summary     = 'Yet another code generator to make you type less stuff'
   spec.description = 'Yet another code generator to make you type less stuff'
   spec.authors     = ['Cherry Ramatis']

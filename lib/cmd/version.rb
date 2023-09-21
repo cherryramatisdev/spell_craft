@@ -6,7 +6,7 @@ module Cmd
     desc 'Print version'
 
     def call
-      puts '0.0.1'
+      puts '0.1.2'
     end
   end
 end
