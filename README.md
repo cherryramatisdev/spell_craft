@@ -11,6 +11,6 @@ In the future, this project should enable configuration of [dry-rb](https://dry-
 ## Commands
 
 - [ ] `add`: A branch to add configurations
-    - [ ] `repl`: This command should prompt to choose from IRB or pry and add correct configuration to `bin/console`, for pry it should install common extensions like pry reload and pry rescue.
+    - [x] `repl`: This command should prompt to choose from IRB or pry and add correct configuration to `bin/console`, for pry it should install common extensions like pry reload and pry rescue.
     - [ ] `autoload`: This command should add the configuration necessary to use zeitwerk on the current project.
 - [ ] `remove`: A branch to remove configurations
