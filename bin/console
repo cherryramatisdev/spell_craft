@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'sorbet-runtime'
+
+require_relative '../config/application'
+
+require 'pry-reload'
+require 'pry'
+Pry.start
