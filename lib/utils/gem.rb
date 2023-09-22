@@ -12,5 +12,10 @@ module Utils
       pattern = /gem\s+['"]#{name}['"]/
       !gemfile_content.scan(pattern).empty?
     end
+
+    sig { returns(T::Boolean) }
+    def self.gemfile_exist?
+      File.exist?('Gemfile')
+    end
   end
 end
