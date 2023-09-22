@@ -8,6 +8,7 @@ module Cmd
     register 'version', Version, aliases: ['v', '-v', '--version']
     register 'add', aliases: ['a'] do |prefix|
       prefix.register 'repl', Add::Repl
+      prefix.register 'autoload', Add::Autoload
     end
   end
 end
