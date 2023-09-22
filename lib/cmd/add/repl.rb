@@ -41,6 +41,7 @@ module Cmd
         end
       end
 
+      sig { params(irb: T::Boolean, pry: T::Boolean).void }
       def call(irb:, pry:)
         if pry
           response = install_deps
@@ -76,8 +77,10 @@ module Cmd
 
       sig { returns(T.any(Result::Success, Result::Failure)) }
       def install_deps
-        unless File.exist?('Gemfile') || Utils::Shell.binary_exists?('bundle')
-          return Result::Failure.new({ message: 'Gemfile don\'t exist or the bundle gem is not available' })
+        return Result::Failure.new({ message: 'Could not locate Gemfile' }) unless Utils::Gem.gemfile_exist?
+
+        unless Utils::Shell.binary_exists?('bundle')
+          return Result::Failure.new({ message: 'Could not locate bundle gem' })
         end
 
         return Result::Success.new(true) if Utils::Gem.exists?('pry') || Utils::Gem.exists?('pry-reload')
