@@ -7,6 +7,7 @@ module Utils
 
     sig { params(name: String).returns(T::Boolean) }
     def self.create_directory_if_not_exist(name)
+      # TODO: testando
       return true if File.directory?(name)
 
       begin
